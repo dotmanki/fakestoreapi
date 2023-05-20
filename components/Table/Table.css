@@ -1,0 +1,32 @@
+table thead td,
+table thead td button {
+  font-size: 1.25rem;
+}
+
+table tbody a {
+  color: var(--text);
+  background-color: var(--primary);
+  padding: 0.25rem;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+table tbody a:hover {
+  background-color: var(--hover-primary);
+}
+
+.sort-button {
+  color: var(--text);
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.sort-button::after {
+  content: '▲';
+}
+
+.sort-reverse::after {
+  content: '▼';
+}

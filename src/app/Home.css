@@ -1,0 +1,12 @@
+header {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+main section article {
+  display: flex;
+  gap: 1rem;
+}
