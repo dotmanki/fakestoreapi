@@ -1,19 +1,19 @@
 :root {
-  --ground: #24212c;
-  --on-primary: #201835;
-  --primary: #104152;
-  --hover-primary: #01497c;
-  --secondary: #b66049;
-  --text: #fff;
-}
-
-[data-theme='dark'] {
   --ground: #eee;
   --on-primary: hsl(257, 60%, 50%);
   --primary: hsl(195, 67%, 50%);
   --hover-primary: hsl(205, 98%, 35%);
   --secondary: #5a3024;
   --text: #000;
+}
+
+[data-theme='dark'] {
+  --ground: #24212c;
+  --on-primary: #201835;
+  --primary: #104152;
+  --hover-primary: #01497c;
+  --secondary: #b66049;
+  --text: #fff;
 }
 
 html,
