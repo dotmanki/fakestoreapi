@@ -5,7 +5,7 @@ import './Navbar.css'
 import { CgDarkMode } from 'react-icons/cg'
 
 const Navbar = () => {
-  const themeStorage = localStorage.getItem('theme')
+  const themeStorage = window !== undefined && localStorage.getItem('theme')
   const [isDark, setIsDark] = useState<boolean>(!!themeStorage ?? false)
 
   useEffect(() => {
@@ -14,6 +14,15 @@ const Navbar = () => {
       isDark ? 'dark' : 'light'
     )
   }, [isDark])
+
+  const toggleTheme = () => {
+    if (window !== undefined) {
+      isDark
+        ? localStorage.removeItem('theme')
+        : localStorage.setItem('theme', 'dark')
+    }
+    setIsDark(!isDark)
+  }
 
   return (
     <nav>
@@ -27,12 +36,7 @@ const Navbar = () => {
           <button>
             <CgDarkMode
               size={24}
-              onClick={() => {
-                isDark
-                  ? localStorage.removeItem('theme')
-                  : localStorage.setItem('theme', 'dark')
-                setIsDark(!isDark)
-              }}
+              onClick={toggleTheme}
             />
           </button>
         </li>
